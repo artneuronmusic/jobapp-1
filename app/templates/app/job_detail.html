@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %} FlixCareers | {{job.title}} {% endblock%}
+
+{% block content %}
+
+<section>
+  <div class="container">
+    <div class="view-post">
+      <h1 class="jobtitle">
+        {{ job.title }}
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </h1>
+      <p class="location it">Location: <span>{{job.location.city}}</span></p>
+      <p class="status it">Type: <span>Full time</span></p>
+      <p class="budget it">Salary: <span>{{job.salary}}</span></p>
+      <div class="desc">
+        <p class="details">
+          {{job.description}}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}
+
+
+
+<!-- <a href="{% url 'jobs_home' %}">
+    <h4>Home</h4>
+</a>
+<h1>Job Title: {{job.title}}</h1>
+<h3>Job Detail: {{job.description}}</h3>
+<h3>Job Salary: {{job.salary}}</h3> -->

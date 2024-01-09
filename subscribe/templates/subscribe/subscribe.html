@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block title %} FlixCareers | Subscribe {% endblock%}
+
+{% block content %}
+<section>
+  <div class="container">
+      <form class="email-form" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <!-- <p>
+          <label for="id_first_name">Enter First Name:</label>
+          <input type="text" name="first_name" maxlength="100" required id="id_first_name">
+        </p>
+        <p>
+          <label for="id_last_name">Enter Last Name:</label>
+          <input type="text" name="last_name" maxlength="100" required id="id_last_name">
+        </p>
+        <p>
+          <label for="id_email">Enter Email:</label>
+          <input type="email" name="email" maxlength="100" required id="id_email"> 
+        </p>
+        <p>
+          <label for="id_option">Option:</label>
+          <select name="option" id="id_option">
+        <option value="W">Weekly</option>
+        <option value="M" selected>Monthly</option>
+      </select>
+        </p> -->
+      <button class="email-submit">Submit</button>
+      </form>
+</div>
+  </div>
+</section>
+{% endblock content %}
+
+
+
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}">
+    <title>Subscribe Form</title>
+  
+</head> -->
+<!-- <body>
+    <h1><img src="{% static 'subscribe/balmuda.png' %}" alt="subscribe">Subscribe Form</h1>
+      <form method="post">
+        {% csrf_token %} 
+        {{form.as_p}} -->
+        <!-- {{ form.as_table }} -->
+
+        <!-- {{ form }}
+        <input type="submit" value="Submit"> -->
+
+        
+        <!-- {% if email_error_empty %}
+        <p>{{ email_error_empty }}</p>
+        {% endif %}-->
+
+
+        <!-- {% for field in form %}
+        <div class="subscribe_field">
+            {{field.errors}}
+            <label for="{{field.id_for_label}}">{{field.label}}</label>
+           
+            {{field}}
+        </div>
+        {% endfor %} -->
+         <!-- {{field.label_tag}} -->
+        
+
+
+        <!-- <div class="subscribe_field">
+       {{ form.first_name.errors }}
+        <label for="{{form.first_name.id_for_label}}">{{form.first_name.label}}</label>
+        {{ form.first_name }} -->
+        <!-- <input type="text" id="f_name" name="firstname" placeholder="Your First Name" required> -->
+        <!-- <br>
+        </div>
+        <div class="subscribe_field">
+        {{ form.last_name.errors }}
+        <label for="{{form.last_name.id_for_label}}">{{form.last_name.label}}</label>
+        {{ form.last_name }} -->
+        <!-- <label for="l_name">Last Name</label>
+        <input type="text" id="l_name" name="lastname" placeholder="Your Last Name" required> -->
+        <!-- <br>
+        </div>
+        <div class="subscribe_field">
+        {{ form.email.errors }}
+        <label for="{{form.email.id_for_label}}">{{form.email.label}}</label>
+        {{ form.email }} -->
+        <!-- <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required> -->
+        <!-- <br>
+        </div> -->
+        <!-- <input type="submit" value="Submit"> 
+ 
+      </form>
+      <button onclick="popup()">Click me</button>
+      <script src="{% static 'subscribe/main.js' %}">
+       
+      </script>
+    
+</body>
+</html> -->
