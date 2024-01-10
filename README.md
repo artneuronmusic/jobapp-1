@@ -1,1 +1,1 @@
-# django_app1
+# jobapp-1
