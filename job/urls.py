@@ -33,8 +33,8 @@ urlpatterns = [
     #but add path directing to app.urls
     path('', include('subscribe.urls')),
     path('uploads/', include('uploadapp.urls'))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
-  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #\
+  #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 #the static things help to show image after its get verified or saved
 #add MEDIA_URL/ROOT in job settings.py
