@@ -29,7 +29,7 @@ DEBUG = os.getenv('IS_DEVELOPMENT', True)
 #DEBUG = True
 #DEBUG = Fasle
 
-ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS'), '127.0.0.1']
+ALLOWED_HOSTS = [os.getenv('APP_HOST'), '127.0.0.1']
 # ALLOWED_HOSTS = []
 #ALLOWED_HOSTS = ['*']
 
