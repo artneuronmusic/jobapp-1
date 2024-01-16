@@ -52,7 +52,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    # "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -139,3 +139,4 @@ MEDIA_URL = '/media/'
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+STATICFILES_CTORAGE = "whitenoise.middleware.WhiteNoiseMiddleware"
