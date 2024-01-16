@@ -34,7 +34,12 @@ ALLOWED_HOSTS = [os.getenv('APP_HOST'), '127.0.0.1']
 # ALLOWED_HOSTS = []
 #ALLOWED_HOSTS = ['*']
 
-
+# STORAGES = {
+#     "default": {
+#         "BACKEND": "storages.backends.s3.S3Storage",
+#         "OPTIONS": {},
+#     },
+# }
 # Application definition
 
 INSTALLED_APPS = [
@@ -46,13 +51,14 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "app.apps.AppConfig",
     "subscribe.apps.SubscribeConfig",
-    "uploadapp.apps.UploadappConfig"
+    "uploadapp.apps.UploadappConfig",
+    "storages",
 ]
    # "app.apps.AppConfig"   the whole thing from app can be picked up
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    # "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -139,4 +145,10 @@ MEDIA_URL = '/media/'
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-STATICFILES_CTORAGE = "whitenoise.middleware.WhiteNoiseMiddleware"
+STATICFILES_STORAGE = "whitenoise.middleware.WhiteNoiseMiddleware"
+DEFAULT_FILE_STORAGE = "storages.backends.s3.S3Storage"
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+AWS_S3_ACCESS_KEY_ID=os.getenv('AWS_S3_ACCESS_KEY_ID')
+AWS_S3_SECRET_ACCESS_KEY=os.getenv('AWS_S3_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME=os.getenv('AWS_STORAGE_BUCKET_NAME')
+AWS_QUERYSTRING_AUTH=False
