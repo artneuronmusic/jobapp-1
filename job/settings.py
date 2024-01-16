@@ -25,7 +25,8 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-!ygufu6z%_z8dcj^(tq&^#3u*p
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('IS_DEVELOPMENT', True)
+DEBUG = os.getenv('IS_DEVELOPMENT', True) == 'True'
+# DEBUG = os.getenv('IS_DEVELOPMENT', True)
 #DEBUG = True
 #DEBUG = Fasle
 
